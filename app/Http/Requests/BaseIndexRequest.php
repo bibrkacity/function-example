@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+/**
+ * Base class for index requests with pagination
+ */
+class BaseIndexRequest extends FormRequest
+{
+    /**
+     * Rules for index requests with pagination
+     * @return string[]
+     */
+    public function rules(): array
+    {
+        return [
+            'page' => 'int|min:1',
+            'per_page' => 'int|min:0',
+            'sort_dir' => 'in:asc,desc',
+            'sort_name' => ['string'],
+            'query' => 'string',
+        ];
+    }
+}

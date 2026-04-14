@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Requests\User;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreRequest extends FormRequest
+{
+    public function rules(): array
+    {
+        return [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|unique:users,email|max:255',
+            'password' => 'required|string|confirmed|min:6',
+            'password_confirmation' => 'required|string|same:password',
+            'birth_date' => 'date',
+        ];
+    }
+
+    public function authorize(): bool
+    {
+        /**
+         * Determine if the $this->user is authorized to store user model.
+         */
+        return true;
+    }
+}
