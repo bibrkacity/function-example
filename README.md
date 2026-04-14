@@ -17,7 +17,7 @@ I will be glad to see your issues or your pull requests.
 
 ## Installation
 
-1. Clone this repository () and `cd` into root folder ( *your-path*/function-example)
+1. Clone this repository (https://github.com/bibrkacity/function-example.git) and `cd` into root folder ( *your-path*/function-example)
 2. Copy `.env.example` to `.env`
 3. Run `composer install`
 4. Run `./vendor/bin/sail up`
