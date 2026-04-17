@@ -17,7 +17,7 @@ return new class () extends Migration {
         DB::statement($sql);
 
         $sql = <<<FNC
-CREATE FUNCTION zodiac(d date) RETURNS varchar(40) deterministic NO SQL
+CREATE FUNCTION zodiac(d date) RETURNS varchar(20) deterministic NO SQL
 begin
   DECLARE mn int;
   DECLARE dy int;
